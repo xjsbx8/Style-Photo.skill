@@ -26,6 +26,7 @@ Content-Type: application/json
 ```
 
 要点：
+- 模型版本：直连方舟仍用 `doubao-seedream-5-0-pro`。2026-11 核对方舟公开的图片模型价格清单只收录 5.0 pro / 5.0 flash / 5.0 lite / 4.5 / 4.0，尚无 5.5；`seedream_5.5` 只在 agent 侧的 `image_gen` 工具可用。方舟后续上线 5.5 时，把下方 model 换成对应 Model ID 即可
 - `image` 数组顺序 = 人物图 + 穿搭图 + 场景图，与 prompt 中"图1、图2…"编号一一对应
 - `size`：`2K` / `1K` / 指定宽高像素；指定像素必须小写 `x`（`1248x1664`），需 16 的倍数、总像素 921,600–4,194,304
 - `watermark: true` 会在右下角标"AI生成"水印
@@ -40,7 +41,7 @@ Content-Type: application/json
 - 非 200：按官方错误码处理，不要把响应体/令牌泄露给用户
 - 输出直接用 seedream 生成结果，不做额外后处理滤镜（避免画面发灰、变脏）
 
-## 计费速查（doubao-seedream-5-0-pro）
+## 计费速查（doubao-seedream-5-0-pro，直连方舟）
 
 - ≤261 万像素（1.5K 及以下）：0.30 元/张；>261 万：0.60 元/张
 - 输入图：首张免费，第 2 张起 0.02 元/张
