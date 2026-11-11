@@ -38,8 +38,9 @@ description: 风格照片生成。当用户提供人物参考照片（可能附�
 
 ### Step 3 · 生成
 
-用 `image_gen` 工具（参考图 URL 全部传入，`model_version=seedream_5.0_pro`）：
+用 `image_gen` 工具（参考图 URL 全部传入，`model_version=seedream_5.5`）：
 
+- 仅当工具报该模型不可用/不支持时，才退回 `seedream_5.0_pro`，并在交付说明里注明实际使用的模型
 - prompt = Step 2 组装的完整提示词
 - 参考图顺序：人物图 + 穿搭图 + 场景图（全部传入，顺序与 prompt 中编号一致）
 - 尺寸/比例：按输出尺寸选宽高比（见 references/prompt-template.md 的尺寸表）；默认 1248x1664 对应 3:4 竖图（width 1248, height 1664，或按工具限制用 3:4）
